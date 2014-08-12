@@ -1,0 +1,20 @@
+.tab2{background:none;}
+.tab2 li a{background:#666666; padding:10px 30px; font-size:1.2em; font-weight:600;}
+.tab2>li >a, .tab2>li >a:hover, .tab2>li >a:focus
+{cursor: default;
+background-color: #666666;
+}
+
+.tab-border{border:1px solid #1e3b5c; padding:20px;}
+
+
+.tab2>li.active>a, .tab2>li.active>a:hover, .tab2>li.active>a:focus
+{color: #fff;
+cursor: default;
+background-color: #1e3b5c;
+border: 1px solid #ddd;
+border-bottom-color: transparent;}
+
+.direct{font-size: 1.5em; font-weight:600; color:#444444; margin-top:40px;}
+.dirt01{font-size:1em; color:#444444; }
+.dirt01 li{line-height:30px;}

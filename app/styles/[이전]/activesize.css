@@ -1,0 +1,116 @@
+.responsive {
+    float: left;
+    margin-left: 14px;
+    background: #383838;
+    padding: 7px 11px;
+    border-radius: 2px;
+    margin-top: 3px;
+}
+
+.responsive a {
+    opacity:0.5;
+    float: left;
+    margin: 0 6px;
+}
+.responsive a.desktop { background: url(../images/activesize/devices.png) no-repeat 0 0; width: 20px; height: 19px; }
+.responsive a.tabletlandscape { background: url(../images/activesize/devices.png) no-repeat -30px -3px; width: 17px; height: 14px;
+    margin-top: 2px;}
+/*iPad portrait*/
+/*----------------------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 979px) {
+    .responsive{
+        display:none;
+    }
+
+    img.preview {
+        width: 360px;
+    }
+}
+
+/*iphone landscape*/
+/*----------------------------------------------------------------------*/
+@media (max-width: 767px) {
+    .responsive{
+        display:none;
+    }
+
+    img.preview {
+        width: 300px;
+        left: 191px;
+    }
+
+    #theme_select {
+        width: 160px;
+    }
+
+    .center ul li ul li a {
+        min-width: 158px;
+    }
+
+    .center ul li ul {
+        width: 168px;
+    }
+
+    .logo {
+        margin-right: 10px;
+    }
+
+    .purchase a {
+        padding: 9px 15px 8px 8px;
+    }
+
+    .remove_frame a {
+        padding: 10px 5px;
+        margin-left: 6px;
+    }
+
+    .links {
+        font-size: 11px;
+    }
+}
+
+/*iPhone portrait width*/
+/*----------------------------------------------------------------------*/
+@media (max-width: 480px) {
+
+    #theme_select {
+        width: 160px;
+    }
+
+    img.preview {
+        display: none !important;
+    }
+
+
+
+
+    .center {
+        width: 95%;
+    }
+
+    .purchase a {
+        padding: 9px 10px 8px 7px;
+    }
+
+    .remove_frame a {
+        padding: 10px 5px;
+        margin-left: 6px;
+    }
+
+    .links {
+        font-size: 0;
+    }
+
+    .purchase a img, .remove_frame a img {
+        margin-right: 0;
+    }
+
+}
+.responsive a.tabletportrait { background: url(../images/activesize/devices.png) no-repeat -59px -1px; width: 14px; height: 17px;
+    margin-top: 1px; }
+.responsive a.mobilelandscape { background: url(../images/activesize/devices.png) no-repeat -87px -4px; width: 14px; height: 11px;
+    margin-top: 5px; }
+.responsive a.mobileportrait { background: url(../images/activesize/devices.png) no-repeat -117px -3px; width: 11px; height: 14px;
+    margin-top: 3px; }
+
+.responsive a.active, .responsive a:hover { opacity:1; color: #fff;}

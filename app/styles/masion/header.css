@@ -207,3 +207,8 @@ span.quick-indicators {
   background-color: #222222;
 }
 
+.header{
+    /*background-image: url("images/header/top_bg.png");*/
+    background: url("images/header/top_bg.png") no-repeat;
+    width: 100%;
+}
