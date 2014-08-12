@@ -1,0 +1,64 @@
+<!--
+    Created by SimJeongmee on 2014-07-15.
+    for introducing products
+-->
+
+<link rel="stylesheet" href="styles/waproduct.css">
+
+<script>
+    /* activate scrollspy menu */
+    var $body = $(document.body);
+    var navHeight = $('.navbar').outerHeight(true) + 10;
+
+    $body.scrollspy({
+        target: '#leftCol',
+        offset: navHeight
+    });
+
+    /* smooth scrolling sections */
+    $('a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 50
+                }, 1000);
+                return false;
+            }
+        }
+    });
+</script>
+
+
+<div class="container">
+    <div class="visible-xs visible-sm affix ">
+        <ul class="nav nav-stacked tab-group">
+            <li><a href="#sec00" class="btn btn-block tab-btn tab1 active">IOT 웹 페이지</a></li>
+            <li><a href="#sec11" class="btn btn-block tab-btn tab1">IOT 웹 서버</a></li>
+            <li><a href="#sec22" class="btn btn-block tab-btn tab1">웹 홍보형 이미지 제작</a></li>
+        </ul>
+    </div>
+
+    <div class="row featurette">
+        <div id="ProductMain" class="container my2000">
+            <br>
+
+            <h2>제품소개 <span class="text-muted">Product</span></h2>
+
+            <div id="ProductDetail" class="well">
+                <div ng-include="'views/2000-S_product/048-2100-S_product_View1.html'" id="sec00">
+                </div>
+
+                <div class="row clearfix"></div>
+                <div ng-include="'views/2000-S_product/048-2200-S_product_View2.html'" id="sec11">
+                </div>
+                <div ng-include="'views/2000-S_product/048-2300-S_product_View3.html'" id="sec22">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

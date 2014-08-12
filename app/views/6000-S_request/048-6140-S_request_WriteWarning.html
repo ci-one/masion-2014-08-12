@@ -1,0 +1,19 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="AgreeModal">
+            개인정보 수집 및 활용 동의
+        </h4>
+    </div>
+    <div class="modal-body" style="text-align: center; height:80px;">
+        <ul class="list-unstyled">
+            <li>
+                <input type="checkbox" ng-model="board.agree" ng-init="board.agree = true" ng-required="true">예, 동의합니다.
+            </li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" ng-click="agree()">Next</button>
+    </div>
+</div>

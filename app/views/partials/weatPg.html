@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <h1 ng-class="wet">날씨에 따라 변하는 홈페이지 체험관</h1>
+        <div>
+            <div ng-if="wet=='sun'||wet==null">
+                <iframe src="/views/carousel/n_shine.html" frameborder="0" scrolling="no" style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+            <div ng-if="wet=='rain'">
+                <iframe src="/views/carousel/n_rain.html" frameborder="0" scrolling="no" style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+            <div ng-if="wet=='snow'">
+                <iframe src="/views/carousel/n_snow.html" frameborder="0" scrolling="no" style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+        </div>
+        <div>날씨변경 라인. 슬라이드바를 움직여 날씨를 변경해보세요.</div>
+        <div class="text-left" style="float: left">맑음</div>
+        <div>
+            <div class="text-center">비
+                <div class="text-right" style="float: right">눈</div>
+            </div>
+        </div>
+
+        <input type="range" min="0" max="300" ng-model="weather" ng-change="getWeather()"/>
+        <div>현재 날씨 : {{wet}}</div>
+    </div>
+</div>

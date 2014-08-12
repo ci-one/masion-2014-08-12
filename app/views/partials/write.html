@@ -1,0 +1,8 @@
+<div>this is the best for write</div>
+<div><strong>제목:</strong><input type="text" ng-model="item.title"></div>
+<div><strong>발신자:</strong><input type="text" ng-model="item.writer"></div>
+<div><strong>일자:</strong>{{item.date}}</div>
+<div><strong>첨부파일:</strong>{{item.file}}<span ng-if="item.file==null"><input type="file" ng-file-select="onFileSelect($files)"></span></div>
+<textarea ng-model="item.content"/><p></p>
+        <input type="button" value="send" ng-click="insert()">
+<a href='/views/cione1boardPack.html#/'>수신 메일 목록으로 돌아가기</a>

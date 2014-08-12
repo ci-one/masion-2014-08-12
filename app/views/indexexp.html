@@ -1,0 +1,145 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>고객체험관</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=982de6374226b21b06f16195e22dad72a0580dc6" charset="utf-8"></script>
+    <script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=e69e566720ed31561de7793f47dbc708"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/jquery.simplecolorpicker.css"/>
+    <link rel="stylesheet" href="styles/activesize.css"/>
+    <style type="text/css">
+        .sun{
+            background-color: #ffff00;
+        }
+        .rain{
+            background-color: #72d899;
+        }
+        .snow{
+            background-color: #dde7f4;
+        }
+        .daytime{
+            background-color: #ffc9fa;
+        }
+        .nighttime{
+            background-color: #5a63e4;
+        }
+        .bright{
+            color: #f5f2ba;
+        }
+        .dark{
+            color: #242203;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row clearfix">
+        <div ng-app="expApp" class="col-md-12 column" >
+            <div class="row clearfix">
+                <div class="col-md-3 column" style="height: 500px">
+                    <div id="myTab" class="nav nav-tabs">
+                        <div class="list-group-item"><a href="views/indexexp.html#firstPg" data-toggle="tab">매인페이지</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#timePg" data-toggle="tab">시간변화</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#weatPg" data-toggle="tab">날씨변화</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#backPg" data-toggle="tab">배경동화</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#actPg" data-toggle="tab">반응형웹</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#mapPg" data-toggle="tab">지도/로드맵</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#animPg" data-toggle="tab">액티브애니메이션</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#docuPg" data-toggle="tab">실시간칠판</a></div>
+                        <div class="list-group-item"><a href="views/indexexp.html#nfcPg" data-toggle="tab">NFC액티브</a></div>
+                    </div>
+                </div>
+                <div class="col-md-9 column">
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="firstPg" ng-controller="firstCtrl">
+                            <p>매인페이지</p>
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="timePg" ng-controller="timeCtrl">
+                            <p>시간에 따라 반응하는 웹시스템</p>
+
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="weatPg" ng-controller="timeCtrl">
+                            <p>날씨에 따라 반응하는 웹시스템</p>
+
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="backPg" ng-controller="backCtrl">
+                            <p>배경색상에 반응하는 매뉴시스템</p>
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="actPg" ng-controller="actCtrl">
+                            <p>반응형웹시스템</p>
+
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="mapPg" ng-controller="mapCtrl">
+                            <p>지도/로드맵 지원시스템</p>
+
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="animPg" ng-controller="animCtrl">
+                            <p>액티브애니메이션 시스템</p>
+
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="docuPg" ng-controller="docuCtrl">
+                            <p>웹회의실 시스템</p>
+
+                            <div ng-view></div>
+                        </div>
+                        <div class="tab-pane fade" id="nfcPg" ng-controller="nfcCtrl">
+                            <p>NFC를 통한 IoT 시스템 </p>
+
+                            <div ng-view></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- build:js(app) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<script src="scripts/module.js"></script>
+<script src="scripts/controllers/moduleCtrl.js"></script>
+<script src="scripts/controllers/cione1envSystem.js"></script>
+<script src="scripts/controllers/jquery.simplecolorpicker.js"></script>
+<script>
+    $(function () {
+        $('#myTab a:active').tab('show')
+    })
+</script>
+</body>
+</html>

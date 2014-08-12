@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.text-red
+{
+    color: #ff0000;
+}
+
+.navbar-dark {
+    background-color: #a1a0a0;
+}
+
+.exptain {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .exptain {
+        width: 750px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .exptain {
+        width: 1380px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .exptain {
+        width: 1470px;
+    }
+}
+
+.exptain-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo {
+    padding: 5px 15px;
+}
+
+p a {
+    color: #ffffff;
+}
+
+p a:hover,
+p a:focus,
+p a:active,
+p a.active {
+    color: #ffffff;
+}
+
+/*본문내용*/
+
+.well-stage {
+    background-color: #d7d7d7;
+    padding: 10px;
+}

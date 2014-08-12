@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+ *{font-family:'Nanum Gothic', sans-serif; }
+body{padding-bottom:60px;}
+/*iframe{
+	-webkit-user-select: none; cursor: -webkit-zoom-in;
+}*/
+img{max-width:100%;}
+a:hover,
+a:focus {
+  color: #2a6496;
+  text-decoration: none;
+}
+/*최상단 nav바 낮*/
+.nav{background:#618cbf; border-radius: 0;}
+.nav li a{color:#ffffff; padding:5px 15px 0;}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #618cbf;
+}
+.navbar {border-radius: 0;}
+/*nav바 낮*/
+.navbar-light {
+  background-color: #618cbf;
+}
+
+/*하단 고정 nav바 낮*/
+.navbar-under{padding:0; background-color: #618cbf;}
+.navbar-under p{margin-bottom:0;}
+.navbar-under p img{max-width:80%; padding:5px 0;}
+
+/*로그인모달*/
+.form-signin-heading{font-family:'Nanum Gothic', sans-serif; font-size:1.6em; font-weight:600;}
+.form-signin input{margin:20px 0;}
+.btn-cancel {
+  color: #ffffff;
+  background-color: #adadad;
+  border-color: #cccccc;
+}
+.btn-login {
+  color: #ffffff;
+  background-color: #213f7b;
+  border-color: #cccccc;
+}
+/*메인버튼-모바일*/
+.btn-block{ padding:30px 0;}
+.btn-blue {color:#ffffff;
+  background-color:#1e3b5c;
+  border-color:#1e3b5c;
+  margin-top:5px;
+  font-weight:bold;
+  font-size:1.1em;}
+.btn-blue:hover{ color:#ffffff; }
+.btn-top{margin-top:10px;}
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active,
+.btn-blue.active
+{color: #ffffff;
+  background-color: #1e3b5c;
+  border-color: #1e3b5c; }
+
+/*NFC버튼*/
+.icon-btn{margin-top:50px;}
+.icon-btn h3{font-family:'Nanum Gothic', sans-serif; font-size:1.2em; color:#484848; font-weight:600;}
+
+/*밤 */
+/*nav바 
+.nav{background:#a1a0a0; }
+.navbar-light {
+  background-color: #a1a0a0;
+}*/
+/*퀵메뉴-모바일
+.mtitle{background-color:#adadad;}
+*/
+/*하단 고정 nav바
+.navbar-under{padding:0; background-color: #a1a0a0;}*/
+/*메뉴버튼
+.btn-blue{background-color:#222222;
+ */
+.mycontainer{
+    margin-bottom: 60px;
+
+}

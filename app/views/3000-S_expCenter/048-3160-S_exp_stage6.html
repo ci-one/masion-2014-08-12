@@ -1,0 +1,89 @@
+
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>고객체험관</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!--
+
+        <script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=982de6374226b21b06f16195e22dad72a0580dc6" charset="utf-8"></script>
+        <script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=e69e566720ed31561de7793f47dbc708"></script>
+    -->
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/jquery.simplecolorpicker.css"/>
+    <link rel="stylesheet" href="styles/activesize.css"/>
+    <link href="styles/wacommon.css" rel="stylesheet">
+    <link href="styles/exp_stage.css" rel="stylesheet">
+</head>
+<body ng-app="expApp">
+<!-- 본문 내용-->
+
+<div class="container" ng-controller="mapCtrl">
+    <h1>This is the html for Map Page</h1>
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="tabbable" id="tabs-745055">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="mapPg/#nvmap" data-toggle="tab">지도</a>
+                        </li>
+                        <li>
+                            <a href="mapPg/#rdmap" data-toggle="tab" onclick="init()">로드맵</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="nvmap">
+                            <iframe src="http://dna.daum.net/include/tools/routemap/map_view.php?width=800&height=480&latitude=37.48033868471712&longitude=126.88674783357148&contents=&zoom=4" width="800" height="515" scrolling="no" frameborder="0"></iframe>
+                        </div>
+                        <div class="tab-pane" id="rdmap">
+                            <div id="roadview" style="width:800px;height:480px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    function init() {
+        var p = new daum.maps.LatLng(37.480140, 126.886409);
+        var rc = new daum.maps.RoadviewClient();
+        var rv = new daum.maps.Roadview(document.getElementById("roadview"));
+
+        rc.getNearestPanoId(p, 50, function (panoid) {
+            rv.setPanoId(panoid);
+            rv.setViewpoint({
+                pan: 50,
+                tilt: 0,
+                zoom: 0
+            });
+        });
+    }
+</script>
+
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="scripts/module.js"></script>
+<script src="scripts/controllers/module.controller.js"></script>
+<script src="scripts/controllers/cione1envSystem.js"></script>
+</body>
+</html>

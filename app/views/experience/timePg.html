@@ -1,0 +1,28 @@
+
+<div>
+    <div>
+        <h1 ng-class="chktime">시간에 따라 변하는 홈페이지 체험관</h1>
+
+        <div>
+            <div ng-if="chktime=='daytime'||chktime==null">
+                <iframe src="views/carousel/n.html" frameborder="0" scrolling="no"
+                        style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+            <div ng-if="chktime=='nighttime'">
+                <iframe src="views/carousel/d.html" frameborder="0" scrolling="no"
+                        style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+        </div>
+
+        <div>시간변경 라인. 슬라이드바를 움직여 시간을 변경해보세요.</div>
+            <div class="text-left" style="float: left">Am6:00</div>
+            <div>
+                <div class="text-center">Pm6:00
+                    <div class="text-right" style="float: right">Am6:00</div>
+                </div>
+            </div>
+        <input type="range" min="0" max="240" ng-model="time" ng-change="getTime()"/>
+
+        <div>현재 시간대 : {{chktime}}</div>
+    </div>
+</div>

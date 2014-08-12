@@ -1,0 +1,73 @@
+<div>
+    <table style="border:solid; width:250px">
+        <tr>
+            <td>
+                {{board.title}}
+            </td>
+            <td style="text-align: right">
+                {{board.date}}
+            </td>
+        </tr>
+        <tr>
+            <td style="border:solid">
+                author
+            </td>
+            <td style="border:solid">
+                {{board.writer}}
+            </td>
+        </tr>
+        <tr>
+            <td style="border:solid">
+                tel
+            </td>
+            <td style="border:solid">
+                {{board.tel}}
+            </td>
+        </tr>
+        <tr ng-if="board.email">
+            <td style="border:solid">
+                email
+            </td>
+            <td style="border:solid">
+                {{board.email}}
+            </td>
+        </tr>
+        <tr ng-if="board.company">
+            <td style="border:solid">
+                company
+            </td>
+            <td style="border:solid">
+                {{board.company}}
+            </td>
+        </tr>
+        <tr ng-if="board.homepage">
+            <td style="border:solid">
+                homepage
+            </td>
+            <td style="border:solid">
+                {{board.homepage}}
+            </td>
+        </tr>
+        <tr ng-if="board.bizType">
+            <td style="border:solid">
+                bizType
+            </td>
+            <td style="border:solid">
+                {{board.bizType}}
+            </td>
+        </tr>
+        <tr ng-if="board.money">
+            <td style="border:solid">
+                money
+            </td>
+            <td style="border:solid">
+                {{board.money}}
+            </td>
+        </tr>
+        <tr>
+            <td style="height:100px; border:solid" colspan="2">
+                {{board.contents}}
+            </td>
+        </tr>
+    </table>
+</div>

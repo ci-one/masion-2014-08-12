@@ -1,0 +1,66 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>고객체험관</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!--
+
+        <script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=982de6374226b21b06f16195e22dad72a0580dc6" charset="utf-8"></script>
+        <script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=e69e566720ed31561de7793f47dbc708"></script>
+    -->
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/jquery.simplecolorpicker.css"/>
+    <link rel="stylesheet" href="styles/activesize.css"/>
+    <link href="styles/wacommon.css" rel="stylesheet">
+    <link href="styles/exp_stage.css" rel="stylesheet">
+</head>
+<body ng-app="expApp">
+<div class="container" ng-controller="timeCtrl">
+    <div>
+        <h1 ng-class="wet">날씨에 따라 변하는 홈페이지 체험관</h1>
+        <div>
+            <div ng-if="wet=='sun'||wet==null">
+                <iframe src="/views/carousel/n_shine.html" frameborder="0" scrolling="no" style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+            <div ng-if="wet=='rain'">
+                <iframe src="/views/carousel/n_rain.html" frameborder="0" scrolling="no" style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+            <div ng-if="wet=='snow'">
+                <iframe src="/views/carousel/n_snow.html" frameborder="0" scrolling="no" style="margin-left:5%;width: 90%;height:300px"></iframe>
+            </div>
+        </div>
+        <div>날씨변경 라인. 슬라이드바를 움직여 날씨를 변경해보세요.</div>
+        <div class="text-left" style="float: left">맑음</div>
+        <div>
+            <div class="text-center">비
+                <div class="text-right" style="float: right">눈</div>
+            </div>
+        </div>
+
+        <input type="range" min="0" max="300" ng-model="weather" ng-change="getWeather()"/>
+        <div>현재 날씨 : {{wet}}</div>
+    </div>
+</div>
+
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="scripts/module.js"></script>
+<script src="scripts/controllers/module.controller.js"></script>
+<script src="scripts/controllers/cione1envSystem.js"></script>
+</body>
+</html>

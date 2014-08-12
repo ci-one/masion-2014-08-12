@@ -1,0 +1,129 @@
+h3{
+    padding-top:5px;
+    margin-top: 5px
+}
+
+h4{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.featurette-heading{
+    font-size: 250%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.title{
+
+    margin-bottom: 10px;
+}
+.image{
+
+    margin-bottom: 10px;
+
+}
+.content{
+    margin-bottom: 10px;
+}
+
+.sub-title{
+    font-size: 200%;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.container.my4000{
+    margin-bottom:120px;
+}
+
+.affix {
+    top: 60px;
+    right: 10px;
+    z-index: 1;
+}
+
+.my4000-bg{
+    /*background-color: #e0e0e0;*/
+    /*
+    color: ghostwhite;
+    */
+}
+
+body{padding-bottom:60px;}
+/*iframe{
+	-webkit-user-select: none; cursor: -webkit-zoom-in;
+}*/
+img{max-width:100%;}
+a:hover,
+a:focus {
+    color: #2a6496;
+    text-decoration: none;
+}
+
+
+/*서브페이지 타이틀*/
+h2{font-family:'Nanum Gothic', sans-serif; text-indent:32px; background:#1e3b5c; color:#ffffff; font-size:1.3em; line-height:40px; margin-top:0; border-radius: 3px; font-weight:bold;}
+h3{font-family:'Nanum Gothic', sans-serif; font-size:1.6em; font-weight:700; margin-top:30px; margin-left:20px;}
+h4{font-family:'Nanum Gothic', sans-serif; font-size:2em; font-weight:700; margin-bottom:15px;}
+
+.well{padding-top:0; padding-right:0; border-radius:0; overflow:hidden;}
+
+/*탭버튼*/
+.tab-group{position:relative; padding:0;}
+.tab-btn{border-radius:5px 0 0 5px; padding:12px 5px; border:0; background-color:#747474; color:#ffffff;}
+.tab-btn:hover,
+.tab-btn:focus,
+.tab-btn:active,
+.tab-btn.active
+{background-color: #426186;
+    color:#ffffff;
+}
+
+/*탭버튼 위치*/
+.tab1{position: absolute; top:0; right:-20px;}
+.tab2{position: absolute; top:42px; right:-20px;}
+.tab3{position: absolute; top:89px; right:-20px;}
+
+.tab1:hover,
+.tab1:focus,
+.tab1:active,
+.tab1.active
+{right:0;
+    width: 120%;
+}
+
+.tab2:hover,
+.tab2:focus,
+.tab2:active,
+.tab2.active
+{right:0;
+    width: 120%;
+}
+
+.tab3:hover,
+.tab3:focus,
+.tab3:active,
+.tab3.active
+{right:0;
+    width: 120%;
+}
+
+
+/*컨텐츠 내용*/
+.content{position:static; margin-top:80px; padding-right:19px;}
+.text1{color:#ae9230;}
+.text-title{font-size:1.5em;}
+.con01{padding-top:20px;}
+.con02{padding-top:20px; font-size:1.2em; margin-bottom:20px;}
+dl{margin-top:20px; padding:0 20px;}
+dt{font-size:1.5em; color:#a9a135; padding-top:20px;}
+dd{color:#848484;}
+
+.media-heading{font-size:1.5em; color:#666666;}
+.iottech{text-indent:5px; font-size:0.9em; line-height:28px;}
+
+.nav {
+    background: none;
+    border-radius: 0;
+}

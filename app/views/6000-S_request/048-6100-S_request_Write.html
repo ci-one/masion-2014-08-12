@@ -1,0 +1,146 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <title>제품문의</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <base href="/">
+    <!--<link rel="stylesheet/less" href="bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="styles/main.css"/>-->
+
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/animate.css">
+
+    <!-- custom -->
+    <link rel="stylesheet" href="styles/wacommon.css">
+    <link rel="stylesheet" href="styles/warequest.css">
+
+    <script src="scripts/design/jquery.min.js"></script>
+    <script src="scripts/design/bootstrap.min.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/requestApp.js"></script>
+    <script src="scripts/controllers/request.write.controller.js"></script>
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icon/cione_logo.png">
+    <!--<link rel="shortcut icon" href="images/icon/favicon.png">-->
+    <link rel="shortcut icon" href="images/icon/cione_logo.png">
+</head>
+<body ng-app="requestApp" ng-controller="requestWriteCtrl">
+
+<div class="container">
+
+    <!-- header(menu bar), quick menu, mobile quick menu -->
+    <div id="navi">
+    </div>
+
+    <!-- top contents -->
+
+    <!-- middle contents -->
+    <div ng-init="board = {author:'', tel:'', email:'',company:''}">
+        <form name="frmInput">
+            <ul class="list-unstyled">
+                <li>
+                    <input type="checkbox" ng-model="mdRequest1" ng-init="mdRequest1 = (type=='request1')">iotWeb
+                    <input type="checkbox" ng-model="mdRequest2" ng-init="mdRequest2 = (type=='request2')">iotWebServer
+                    <input type="checkbox" ng-model="mdRequest3" ng-init="mdRequest3 = (type=='request3')">image
+                </li>
+            </ul>
+            <ul class="list-unstyled">
+                <li>
+                    <input type="text" ng-model="board.author" id="author" placeholder="이름" ng-required="true" style="border:solid; border-color: red">
+                    <div ng-show="frmInput.board.author.$invalid">
+                        <span>이름은 필수입력 사항입니다.</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list-unstyled">
+                <li>
+                    <input type="text" ng-model="board.tel" id="tel" placeholder="연락처" ng-required="true" style="border:solid; border-color: red">
+                </li>
+            </ul>
+            <ul class="list-unstyled">
+                <li>
+                    <input type="text" ng-model="board.email" id="email" placeholder="이메일">
+                </li>
+            </ul>
+            <ul class="list-unstyled">
+                <li>
+                    <input type="text" ng-model="board.company" id="company" placeholder="상호명">
+                </li>
+            </ul>
+
+            <div ng-if="mdRequest1" style="border:solid; border-color:orange"
+                 ng-include="'views/6000-S_request/048-6110-S_request_Write1.html'"></div>
+            <div ng-if="mdRequest2" style="border:solid; border-color:green"
+                 ng-include="'views/6000-S_request/048-6120-S_request_Write2.html'"></div>
+            <div ng-if="mdRequest3" style="border:solid; border-color:blue"
+                 ng-include="'views/6000-S_request/048-6130-S_request_Write3.html'"></div>
+
+            <div>
+                <textarea id="board.contents" placeholder="내용을 입력하거나 아래에서 선택하세요."
+                          ng-model="board.contents" ng-required="true" ng-init="board.contents=''" style="border:solid; border-color: red">
+                </textarea>
+            </div>
+
+            <div>
+                <select size="5" ng-model="selectContents"
+                        ng-options="exam.contents for exam in exampleList"
+                        ng-change="selChange(selectContents.contents)">
+                    <option style="display:none" value="">select</option>
+                </select>
+            </div>
+            <div>
+                <select id="money" ng-model="moneyArea" ng-options="list.money for list in moneyList">
+                    <option value="">선택해주세요</option>
+                </select>
+            </div>
+                <a href="" class="btn btn-primary" role="button" style="color: #ffffff"
+                        data-toggle="modal" ng-click="warning(frmInput.$error.required[0].$error)">보내기
+                </a>
+            <div class="modal fade" id="modal-agree"
+                 role="dialog" aria-labelledby="AgreeModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div ng-include="'views/6000-S_request/048-6140-S_request_WriteWarning.html'"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- bottom contents -->
+
+</div>
+
+</body>
+</html>

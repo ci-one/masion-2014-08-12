@@ -1,0 +1,147 @@
+<!-- begin of header (menu bar) -->
+<header>
+    <!-- begin of header -->
+    <div class="col-md-12 column" style="z-index: 1">
+        <div class="row clearfix">
+            <!-- begin of top menu bar -->
+            <ul class="nav nav-pills" style="background-color: #222222">
+                <li class="pull-right">
+                    <div  ng-if="!userInfo.isAdmin">
+                        <a id="modal-toggle-login" href="#login"
+                           role="button" class="btn" data-toggle="modal" ng-click="tryLogin()">
+                            로그인
+                        </a>
+                    </div>
+                    <div  ng-if="userInfo.isAdmin">
+                        <a id="modal-toggle-logout" href=""
+                           role="button" class="btn" ng-click="Logout()">
+                            로그아웃
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- end of top menu bar -->
+            <!-- begin of logo, menu bar -->
+            <nav class="navbar navbar-light" role="navigation">
+                <div class="col-xs-12 visible-lg visible-md">
+                    <ul class="nav nav-justified">
+                        <li class='active'>
+                            <a href="#home">메인</a>
+                        </li>
+                        <li>
+                            <a href="#introduction">인사말</a>
+                        </li>
+                        <li>
+                            <a href="#organization">조직도</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">포트폴리오</a>
+                        </li>
+                        <li>
+                            <a href="#requestWrite">견적문의</a>
+                        </li>
+                        <li>
+                            <a href="#contract">계약공정</a>
+                        </li>
+                        <li>
+                            <a href="#direction">오시는 길</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of logo, menu bar -->
+        </div>
+    </div>
+    <!-- end of header (menu bar) -->
+</header>
+<!-- end of header (menu bar) -->
+
+<!-- begin of login modal -->
+<div class="modal fade" id="modal-login"
+     role="dialog" aria-labelledby="LoginModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div ng-include="'views/9000-S_login/048-9000-S_login.html'"></div>
+    </div>
+</div>
+<!-- end of login modal -->
+
+<!-- begin of quick menu -->
+<!--<div class="affix affix-quick visible-lg visible-md" data-offset-top="0">
+    <ul class="list-unstyled text-right">
+        <li class="active">
+            <a href="#home">Home</a>
+            <span class="quick-indicators"></span>
+        </li>
+        <li>
+            <a href="#product">Product</a>
+            <span class="quick-indicators"></span>
+        </li>
+        <li>
+            <a href="#expCenter">Exhibition</a>
+            <span class="quick-indicators"></span>
+        </li>
+        <li>
+            <a href="#iot">IoT</a>
+            <span class="quick-indicators"></span>
+        </li>
+        <li>
+            <a href="#trendTech">IT Trend</a>
+            <span class="quick-indicators"></span>
+        </li>
+        <li>
+            <a href="#request">Request</a>
+            <span class="quick-indicators"></span>
+        </li>
+        <li>
+            <a href="#directions">Directions</a>
+            <span class="quick-indicators"></span>
+        </li>
+    </ul>
+</div>-->
+<!-- end of quick menu -->
+
+
+<!-- begin of mobile quick menu (modal) -->
+<div class="modal fade" id="mobile-menu" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="sub-menu">
+        <div class="modal-dialog modal-quick">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="mtitle text-center">
+                        MENU
+                    </p>
+                    <ul class="list-group list-unstyled text-center">
+                        <li class="active">
+                            <a href="#home">홈</a>
+                        </li>
+                        <li>
+                            <a href="#product">제품소개</a>
+                        </li>
+                        <li>
+                            <a href="#expCenter">제품체험관</a>
+                        </li>
+                        <li>
+                            <a href="#iot">사물인터넷 소개</a>
+                        </li>
+                        <li>
+                            <a href="#trendTech">기술동향</a>
+                        </li>
+                        <li>
+                            <a href="#request">제품문의</a>
+                        </li>
+                        <li>
+                            <a href="#directions">오시는 길</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of mobile quick menu (modal) -->

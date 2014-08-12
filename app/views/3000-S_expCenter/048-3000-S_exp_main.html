@@ -1,0 +1,73 @@
+<!--
+    Created by SimJeongmee on 2014-07-15.
+    for experience center
+-->
+<link rel="stylesheet" href="styles/exp_main.css">
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <h2> 제품체험관 </h2>
+        </div>
+    </div>
+
+    <!-- 서브페이지-->
+    <div class="well" ng-controller="expCenterCtrl">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-8 column"><a href="" ng-click="openWin('main');">
+                        <img alt="140x140" src="http://lorempixel.com/1280/600/" />
+                    </a>
+                    </div>
+                    <div class="col-md-4 column cont">
+                        <h3><span class="text1">Lorem ipsum</span> dolor sit amet. </h3>
+                        <p>
+                            Aliquam eget sapien sapien. Curabitur in metus urna.
+                            In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor.
+                        </p>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <div class="col-sm-6 column menu-btn">
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('time');">
+                                    <em class="glyphicon glyphicon-bell"></em> 시간에 따라 변경되는 웹 사이트
+                                </button></a>
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('map');">
+                                    <em class="glyphicon glyphicon-map-marker"></em> 지도와 로드뷰를 통한 위치 안내
+                                </button></a>
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('weather');">
+                                    <em class="glyphicon glyphicon-cloud"></em> 날씨에 따라 변경되는 웹 사이트
+                                </button> </a>
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('ani');">
+                                    <em class="glyphicon glyphicon-picture"></em> 사용자 조작에 반응하는 애니메이션
+                                </button> </a>
+                        </div>
+                        <div class="col-sm-6 column menu-btn">
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('menu');">
+                                    <em class="glyphicon glyphicon-tint"></em> 배경에 따라 메뉴 색상이 변경되는 웹
+                                </button> </a>
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('room');">
+                                    <em class="glyphicon glyphicon-share"></em> 실시간 문서공유 회의실
+                                </button> </a>
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('device');">
+                                    <em class="glyphicon glyphicon-resize-full"></em> 디바이스 크기에 따라 변화하는 웹
+                                </button> </a>
+                            <a href="">
+                                <button class="btn btn-default btn-block btn-lg" type="button" ng-click="openWin('nfc');">
+                                    <em class="glyphicon glyphicon-credit-card"></em> NFC를 이용한 사물인터넷
+                                </button> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div>
+    <h1>배경색상에 반응하는 매뉴</h1>
+
+    <div>{{message}}</div>
+    <div>색상코드 : {{cola}}, 컨텐츠 컬러 : {{contcolor}}</div>
+        <div>
+            <div ng-class="contcolor" style="background-color: {{color}};border:1px dotted;">
+                <h2>
+                    Ci-one은 환경에 반응하는 홈페이지를 제작합니다.
+                </h2>
+
+                <p>
+                    Ci-one은 실제 날씨나 시간에 따라 반응하는 웹시스템, 홈페이지의 상태에 따라 유동적으로 변화하는 웹시스템을 제작합니다.
+                </p>
+
+                <div>
+                    사용자가 설정해주는 것이 아닌 환경에 따라 자동적으로 변화하는 홈페이지,
+                </div>
+                <div>
+                    사물과 사물을 잇는 네트워크, 그것이 바로 사물인터넷이며 Ci-one이 추구하는 웹시스템입니다.
+                </div>
+                <div>　</div>
+            </div>
+            <p>　</p>
+
+            <div>적용할 배경색을 선택하세요.</div>
+            색상리스트:
+            <select name="colorpicker-longlist" ng-model="color">
+                <option value="#e6cea1">#ac725e</option>
+                <option value="#c2ab7e">#ddffee</option>
+                <option value="#a18a5d">#eeffff</option>
+                <option value="#66522c">#ffccff</option>
+                <option value="#695327">#ffccdd</option>
+                <option value="#402d07">#ffdddd</option>
+
+                <option value="#caebca">#ffeebb</option>
+                <option value="#93bd93">#16a765</option>
+                <option value="#598559">#7bd148</option>
+                <option value="#2a542a">#b3dc6c</option>
+                <option value="#0c3b0c">#fbe983</option>
+
+                <option value="#a9bde8">#fad165</option>
+                <option value="#91a3cc">#92e1c0</option>
+                <option value="#3d4f7a">#9fe1e7</option>
+                <option value="#243663">#9fc6e7</option>
+                <option value="#081c4d">#4986e7</option>
+
+                <option value="#d9b0b0">#9a9cff</option>
+                <option value="#b87676">#b99aff</option>
+                <option value="#964e4e">#8886ff</option>
+                <option value="#612a2a">#6360ff</option>
+                <option value="#381111">#cca6ac</option>
+            </select>
+
+        </div>
+</div>
+
+<script>
+
+</script>

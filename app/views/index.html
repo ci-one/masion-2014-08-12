@@ -1,0 +1,103 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <title>매송인테리어</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <base href="/">
+    <!--<link rel="stylesheet/less" href="bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="styles/main.css"/>-->
+
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.css">
+/   <link rel="stylesheet" href="bower_components/angular-animate/angular-animate.css">
+    <!-- custom -->
+    <link rel="stylesheet" href="styles/wacommon.css">
+
+    <script src="scripts/modules/login_v1.01.js"></script>
+    <script src="scripts/modules/angular-file-upload.min.js"></script>
+    <script src="scripts/modules/angular-file-upload-shim.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/maisonApp.js"></script>
+    <script src="scripts/controllers/main.controller.js"></script>
+    <script src="scripts/controllers/login.controller.js"></script>
+    <script src="scripts/controllers/product.controller.js"></script>
+    <script src="scripts/controllers/expCenter.controller.js"></script>
+    <script src="scripts/controllers/iot.controller.js"></script>
+    <script src="scripts/controllers/trendTech.controller.js"></script>
+    <script src="scripts/controllers/request.controller.js"></script>
+    <script src="scripts/controllers/directions.controller.js"></script>
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icon/cione_logo.png">
+    <!--<link rel="shortcut icon" href="images/icon/favicon.png">-->
+    <link rel="shortcut icon" href="images/icon/cione_logo.png">
+
+
+</head>
+<body ng-app="maisonApp" ng-controller="mainCtrl" ng-init="time='day'">
+
+<!--<div data-spy="scroll" data-target="#cioneScrollspy" data-offset="0" id="scrollContent">-->
+
+<!-- header(menu bar), quick menu, mobile quick menu -->
+<div ng-controller="loginCtrl">
+    <div ng-include="'views/header.html'"></div>
+</div>
+
+<!-- menu : home, product, experience center, internet of things, it trend, request, directions, login -->
+<div class="container">
+    <div ng-view="contents" class="contAni {{ pageClass }}"></div>
+</div>
+
+<!-- mobile bottom fixed menu, footer -->
+<div>
+    <div class="navbar-fixed-bottom" ng-include="'views/footer.html'"></div>
+</div>
+
+<script type="text/javascript" src="scripts/design/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/design/scripts.js"></script>
+<script src="scripts/design/respond.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript">
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style")
+        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"))
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+    }
+</script>
+</body>
+</html>

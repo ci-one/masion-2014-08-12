@@ -1,0 +1,169 @@
+<link rel="stylesheet" href="styles/waittrend.css">
+
+<div class="mycontainer">
+    <div class="well">
+        <div id="ITTrendView" class="media">
+            <div class="media-body">
+                <!-- begin of view -->
+                <div class="col-sm-12 col-xs-12 visible-sm visible-xs">
+                    <div class="container">
+                        <div class="col-sm-12 col-xs-12">
+                            <a href="#" class="media-object">
+                                <img ng-src="/images/{{firstitem.file}}" style="width: 300pt" class="media-object"
+                                     alt=''/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-12  col-xs-12">
+                            <div class="media-body">
+                                <a href="{{firstitem.href}}">
+                                    <h4 class="media-heading">
+                                        <blockquote>
+
+                                            <p>
+                                                {{firstitem.title}}
+                                            </p>
+                                            <small>출처:{{firstitem.href}}</small>
+                                        </blockquote>
+
+                                        <p class="p-top">
+                                            내용 : {{firstitem.content}}
+                                        </p>
+                                        <span class="label label-detail pull-left">상세보기    &gt;&gt;</span>
+                                    </h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of view -->
+
+                <!-- begin of view -->
+                <div class="col-md-12 col-lg-12 visible-md visible-lg">
+                    <div class="container">
+
+                        <div class="col-md-4">
+                            <a href="#" class="pull-left">
+                                <img ng-src="/images/{{firstitem.file}}" style="width: 300pt" class="media-object"
+                                     alt=''/>
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="media-body">
+                                <a href="{{firstitem.href}}">
+                                    <h4 class="media-heading">
+                                        <blockquote>
+
+                                            <p>
+                                                {{firstitem.title}}
+                                            </p>
+                                            <small>출처:{{firstitem.href}}</small>
+                                        </blockquote>
+
+                                        <p class="p-top">
+                                            내용 : {{firstitem.content}}
+                                        </p>
+                                        <span class="label label-detail pull-left">상세보기    &gt;&gt;</span>
+                                    </h4>
+                                </a>
+                            </div>
+
+                            <!--
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <blockquote>
+                                        <a href="#">
+                                            <p>
+                                                Title : {{firstitem.title}}
+                                            </p>
+                                            <small>출처:{{firstitem.href}}</small>
+                                        </a>
+
+                                <pre>
+                                    내용 : {{firstitem.content}}
+                                    작성일 : {{firstitem.date}}
+                                </pre>
+                                    </blockquote>
+                                </h4>
+                                <a href="{{firstitem.href}}"><span class="label label-default pull-right">더보기</span></a>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end of view -->
+
+                <div class="container">
+                    <table class="table tb-list">
+                        <thead>
+                        <tr>
+                            <th class="id text-center">Id&nbsp;</th>
+                            <!--<th class="file">linked Image&nbsp;</th>-->
+                            <th class="title text-center">title&nbsp;</th>
+                            <!--<th class="writer">writer&nbsp;</th>-->
+                            <th class="date text-center">Date&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center">
+                        <tr ng-repeat="item in pagedItems[currentPage]">
+                            <td class="text-center">{{item.id}}</td>
+                            <!-- <td>
+                                 <div ng-if="item.file!='no file'"><img ng-src="/images/{{item.file}}"
+                                                                        style='width:40px; height:30px'>
+                                 </div>
+                                 <div ng-if="item.file=='no file'">이미지없음</div>
+                             </td>
+                             -->
+                            <td>
+                                <a href="" ng-click="process(item)">{{item.title}}</a>
+                            </td>
+                            <!--                <td>{{item.writer}}</td>-->
+                            <td class="text-center">
+                                {{item.date}}
+                            </td>
+                            <!--<td ng-show="isAdmin()">
+                                <input type="button" value="Update" ng-click="openWin(item.id)">
+                            </td>-->
+                            <td ng-show="isAdmin()">
+                                <input type="button" value="Delete" ng-click='delete(item.id, item.file)'>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <button class="btn btn-write" ng-click="openWin(-1)" ng-show="isAdmin()">Insert</button>
+        </div>
+
+    </div>
+    <div style="width: 100%;text-align: center">
+        <div class="container" style="width: 300px; margin:0 auto">
+            <ul class="pagination pull-right">
+                <li ng-class="{disabled: currentPage == 0}">
+                    <a href="" ng-click="prevPage()">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                </li>
+                <li ng-repeat="n in range(pagedItems.length)"
+                    ng-class="{active: n == currentPage}"
+                    ng-click="setPage()">
+                    <a href="" ng-bind="n + 1"></a>
+                </li>
+                <li ng-class="{disabled: currentPage == pagedItems.length - 1}">
+                    <a href="" ng-click="nextPage()">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
